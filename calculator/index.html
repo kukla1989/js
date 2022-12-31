@@ -1,0 +1,35 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <p>to choose first or second number  press "number 1" or "number 2" or enters number from keyboard</p>
+        <div class="row">
+                <button onclick="pressNum(0)" class="num">0</button>
+                <button onclick="pressNum(1)" class="num">1</button>
+                <button onclick="pressNum(2)" class="num">2</button>
+            <br>
+                <button onclick="pressNum(3)" class="num">3</button>
+                <button onclick="pressNum(4)" class="num">4</button>
+                <button onclick="pressNum(5)" class="num">5</button>
+            <br>
+                <button onclick="pressNum(6)" class="num">6</button>
+                <button onclick="pressNum(7)" class="num">7</button>
+                <button onclick="pressNum(8)" class="num">8</button>
+                <button onclick="pressNum(9)" class="num"   >9</button>
+           <br>
+        </div>
+        <button onclick="chooseNum(true)" class="num" s>number 1:  </button>
+        <input id="num1-el" style="width:5em;background-color:#777">
+        <button onclick="chooseNum(false)" class="num">number 2:  </button>
+        <input id="num2-el" style="width:5em;">
+        <br>
+        <button onclick="calculate('+')">Add</button>
+        <button onclick="calculate('-')">Subtract</button>
+        <button onclick="calculate('/')">Divide</button>
+        <button onclick="calculate('*')">Multiply</button>
+        <br>
+        <span id="res-el">Result: </span>
+        <script src="index.js"></script>
+    </body>
+</html>
