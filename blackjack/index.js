@@ -12,6 +12,7 @@ let sum = 0
 let money = 200
 
 function startGame(){
+    debugger
     if (money > 0) {
         alive = true
         cards = getTwoRandomCards()
