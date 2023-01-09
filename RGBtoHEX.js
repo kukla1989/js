@@ -1,5 +1,6 @@
 //https://www.codewars.com/kata/513e08acc600c94f01000001
-function rgb(r, g, b){
+//to run test write: "npm test --require ./test/RGBToHEXTest.js" or "npm test"
+exports.convert = function rgbToHex(r, g, b){
   return toHexadecimal(r) + toHexadecimal(g) + toHexadecimal(b)
 }
 
@@ -38,9 +39,4 @@ function toHexadecimal(num){
 }
  */
 
-console.log(rgb(237,255,255) + " should be EDFFFF")
-console.log(rgb(238,255,255) + " should be EEFFFF")
-console.log(rgb(0,1,4) + " should be 000104")
-console.log(rgb(120, 160, 222) + " should be 78A0DE")
-console.log(rgb(0,0,0) + " should be 000000")
-console.log(rgb(-1,555,-777) + " should be 00FF00")
+console.log(this.convert(1, 10, 100))
