@@ -1,5 +1,5 @@
 //https://www.codewars.com/kata/63cbe409959401003e09978b/train/javascript
-function setReducer(input) {
+function setReducer2(input) {
   if(input.length === 1) return input[0];
   let repeated = 0;
   let i = 0;
@@ -22,6 +22,4 @@ function setReducer(input) {
 function deleteElementByIndex(arr, ind){
   return arr.slice(0, ind).concat(arr.slice(ind + 1))
 }
-
-
 console.log(setReducer([ 1, 3, 8, 8, 3, 5, 5, 7])) // 2
