@@ -210,3 +210,78 @@ console.log(pooRoulette([
     [ 'o', 'o', 'o', 'o', 'o', 'o', 'o']
     ]))//, "Calm before the storm");)
  */
+
+//https://www.codewars.com/kata/55f2b110f61eb01779000053/train/javascript
+function getSum(a, b)
+{
+  if (a > b) [b, a] = [a, b];
+  let sum = 0;
+  while (a <= b) {
+    sum += a;
+    a++;
+  }
+  return  sum;
+}
+
+//https://www.codewars.com/kata/564e7fc20f0b53eb02000106/train/javascript
+function consonantCount(str) {
+  return str.split("").reduce((acc, el) => {
+    if (el.match(/[a-z]/i) && el !== "a" && el !== "e" && el !== "i" && el !== "o" && el !== "u") return (acc + 1)
+    return acc + 0;
+  }, 0)
+}
+
+//https://www.codewars.com/kata/5ba178be875de960a6000187/train/javascript
+function findLowestInt(k) {
+  let lowestInt = 2;
+  while (!isRight(k, ++lowestInt)) {}
+  return lowestInt;
+}
+
+function isRight(k, n){
+  return ((k + 1) * n).toString().split("").sort().join("") === (k * n).toString().split("").sort().join("")
+}
+
+//console.log(findLowestInt(325))// 477
+
+//https://www.codewars.com/kata/5a19226646d843de9000007d/train/javascript
+function countConsonants(str) {
+  str = str.toLowerCase();
+  let res = []; // result
+  str.split("").forEach(el => {
+    if (isConsonate(el) && !res.includes(el) ) res.push(el);
+  })
+  return res.length;
+}
+
+function isConsonate(letter){
+  if(letter.match(/[a-z]/i) && letter !== "a" && letter !== "e" && letter !== "i" && letter !== "o" && letter !== "u") return true;
+}
+//console.log(countConsonants("sillystring"))//, 7, "do not count duplicated consonants!") "a", "e", "i", "o", "u".
+
+//https://www.codewars.com/kata/58d3487a643a3f6aa20000ff/train/javascript
+function minMinMax(array) {
+  let max = Math.max(...array);
+  let min = Math.min(...array);
+  let i = min;
+  while (++i < max) {
+    if(!array.includes(i)) return [min, i,  max];
+  }
+}
+
+//https://www.codewars.com/kata/56b0bc0826814364a800005a\
+function cyclops(n) {
+  n = n.toString(2);
+  let midInd = (n.length - 1) / 2 // index of middle number
+  if (n[midInd] !== "0") {
+    return false
+  }
+  n = n.slice(0, midInd) + n.slice(midInd + 1);
+  let ind = 0;
+  while (ind++ < n.length) {
+    if (n[ind] === "0") return false;
+  }
+  return true;
+}
+//console.log(cyclops(5)) //, true
+//console.log(cyclops(3)) //, false
