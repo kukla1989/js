@@ -285,3 +285,65 @@ function cyclops(n) {
 }
 //console.log(cyclops(5)) //, true
 //console.log(cyclops(3)) //, false
+
+//https://www.codewars.com/kata/598f76a44f613e0e0b000026/train/javascript
+function sumOfIntegersInString(s){
+    let num = '';
+    let sum = 0;
+    s += " ";
+    for (let i = 0; i < s.length; i++){
+    if (s[i].match(/[0-9]/i) && !s[i + 1].match(/[0-9]/i)) {
+        sum += +(num + s[i]);
+        num = "";
+    } else if (s[i].match(/[0-9]/i)){
+        num += s[i];
+    }
+    }
+    return sum;
+}
+
+let exampleTests = [
+    ["12.4", 16],
+    ["h3ll0w0rld", 3],
+    ["2 + 3 = ", 5],
+    ["Our company made approximately 1 million in gross revenue last quarter.", 1],
+    ["The Great Depression lasted from 1929 to 1939.", 3868],
+    ["Dogs are our best friends.", 0],
+    ["C4t5 are 4m4z1ng.", 18],
+    ["The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog", 3635]
+  ]
+//exampleTests.forEach(el => console.log(el[0] + "|||| " + sumOfIntegersInString(el[0]) + " === " + el[1]))
+
+
+//https://www.codewars.com/kata/58b8c94b7df3f116eb00005b/train/javascript
+function reverseLetter(str) {
+    let reverseStr = "";
+    for (let i = str.length - 1; i >= 0; i--){
+        if (str[i].match(/[a-z]/i)) reverseStr += str[i];
+    }
+  return reverseStr;
+}
+
+//console.log(reverseLetter("ultr53o?n"))//,"nortlu")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
